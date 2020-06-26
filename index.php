@@ -3,7 +3,7 @@
 
 <?php
 if (session_status() != PHP_SESSION_ACTIVE) session_start();
-
+var_dump($_SESSION);
 if (!isset($_SESSION['page'])) {
 	$_SESSION['page'] = $title = 'authenticate';
 } else {
