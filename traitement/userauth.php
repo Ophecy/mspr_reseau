@@ -53,7 +53,7 @@ if ($_POST['action'] === 'login') {
 
 		if (checkpw($_POST['pwd'], $_POST['usr'])) {
 			$_SESSION["password"] = Base32::encode($_POST['pwd']);
-			$_SESSION["password"] = 'SECRETTT';
+			// $_SESSION["password"] = 'SECRETTT';
 
 			$delay = 0;  // (en secondes)
 			date_default_timezone_set('Europe/Paris');
@@ -69,7 +69,7 @@ if ($_POST['action'] === 'login') {
 				unset($_SESSION['page']);
 				ret(false, 'Wrong token' . $ota);
 			}
-			$_SESSION["password"] = Base32::encode($_POST['pwd']);
+			$_SESSION["password"] = /*$_POST['pwd']; //*/ Base32::encode($_POST['pwd']);
 		} else {
 			unset($_SESSION['user']);
 			unset($_SESSION['page']);
