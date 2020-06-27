@@ -31,7 +31,7 @@ if ((isset($_POST['username']) && isset($_POST['password'])) || true) {
 	$adServer = "LDAP://$server:$port";
 
 	$ldap = ldap_connect($adServer);
-	$username = "Administrateur";
+	$username = "fmacon";
 	$password = "Azerty123";
 
 	$ldaprdn = 'portail.chatelet' . "\\" . $username;
@@ -57,7 +57,7 @@ if ((isset($_POST['username']) && isset($_POST['password'])) || true) {
 		}
 		@ldap_close($ldap);
 	} else {
-		$msg = "Invalid email address / password";
+		$msg = "Invalid email address / password ($username:$password)";
 		echo $msg;
 	}
 }
