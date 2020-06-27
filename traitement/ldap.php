@@ -2,7 +2,7 @@
 $server = "172.31.1.1/1";
 $port = "389";
 $racine = "o=portail.chatelet, c=lab";
-$rootdn = "cn=Administrateur, o=portail.chatelet, c=lab";
+$rootdn = "cn=Administrateur, o=MSPR.portail.chatelet, c=lab";
 $rootpw = "Azerty123";
 
 try {
