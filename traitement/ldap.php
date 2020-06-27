@@ -6,12 +6,12 @@ $rootdn = "cn=Administrateur, o=portail.chatelet, c=lab";
 $rootpw = "Azerty123";
 
 try {
-	$ds = ldap_connect($server);
+	$ds = ldap_connect("LDAP://$server:$port");
 } catch (\Throwable $th) {
 	echo "Impossible de se connecter au serveur LDAP : ";
 	echo "<pre>";
 	var_dump($th);
-	echo "</pre>";
+	die("</pre>");
 }
 
 if ($ds == 1) {
