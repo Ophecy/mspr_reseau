@@ -5,7 +5,11 @@ $racine = "o=portail.chatelet, c=lab";
 $rootdn = "cn=Administrateur, o=portail.chatelet, c=lab";
 $rootpw = "Azerty123";
 
-$ds = ldap_connect($server);
+try {
+	$ds = ldap_connect($server);
+} catch (\Throwable $th) {
+	echo "Impossible de se connecter au serveur LDAP";
+}
 
 if ($ds == 1) {
 	// on s'authentifie en tant que super-utilisateur, ici, ldap_admin
