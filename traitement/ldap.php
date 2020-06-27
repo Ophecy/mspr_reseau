@@ -17,7 +17,7 @@ try {
 if ($ds == 1) {
 	// on s'authentifie en tant que super-utilisateur, ici, ldap_admin
 	$r = ldap_bind($ds, $rootdn, $rootpw);
-	echo "<pre>";
+	echo "ldap connecté <br><pre>";
 	var_dump($r);
 	echo "</pre>";
 	ldap_close($ds);
