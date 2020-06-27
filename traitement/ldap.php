@@ -1,5 +1,5 @@
 <?php
-$server = "172.31.1.1";
+$server = "172.31.1.1/1";
 $port = "389";
 $racine = "o=portail.chatelet, c=lab";
 $rootdn = "cn=Administrateur, o=portail.chatelet, c=lab";
@@ -8,7 +8,10 @@ $rootpw = "Azerty123";
 try {
 	$ds = ldap_connect($server);
 } catch (\Throwable $th) {
-	echo "Impossible de se connecter au serveur LDAP";
+	echo "Impossible de se connecter au serveur LDAP : ";
+	echo "<pre>";
+	var_dump($th);
+	echo "</pre>";
 }
 
 if ($ds == 1) {
