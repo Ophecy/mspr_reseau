@@ -34,7 +34,7 @@ if ((isset($_POST['username']) && isset($_POST['password'])) || true) {
 	$username = "Administrateur";
 	$password = "Azerty123";
 
-	$ldaprdn = 'MSPR.portail.chatelet' . "\\" . $username;
+	$ldaprdn = 'portail.chatelet' . "\\" . $username;
 
 	ldap_set_option($ldap, LDAP_OPT_PROTOCOL_VERSION, 3);
 	ldap_set_option($ldap, LDAP_OPT_REFERRALS, 0);
